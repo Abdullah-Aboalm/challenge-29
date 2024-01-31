@@ -1,0 +1,382 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  background-color: #36384d;
+  overflow: hidden;
+}
+
+/* start subscription card */
+
+.sub {
+  position: relative;
+  top: 600px;
+  width: 40%;
+  height: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.21);
+  animation: sub 1s ease-in-out forwards;
+}
+
+@keyframes sub {
+  0% {
+    top: 600px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+.sub .des {
+  width: 50%;
+  padding-left: 25px;
+}
+
+.sub .image {
+  width: 45%;
+  height: 100%;
+  background-image: url(./assets/images/illustration-sign-up-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0;
+  border-radius: 10px;
+}
+
+.sub .des h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.sub .des p {
+  font-size: 13px;
+}
+
+.sub .des p.head {
+  margin-bottom: 15px;
+}
+
+.sub .des ul {
+  margin-bottom: 30px;
+}
+
+.sub .des li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.sub .des li img {
+  margin-right: 15px;
+}
+
+.sub .form {
+  width: 100%;
+}
+
+.sub .des .form .label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.sub .des .form label {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.sub .des .form p#Err {
+  color: rgba(244, 63, 63, 0.823);
+  font-size: 11px;
+  font-weight: 600;
+  display: none;
+}
+
+.sub .des .form input#Email {
+  width: 100%;
+  padding: 13px;
+  border-radius: 6px;
+  border: 1.5px solid rgb(161, 161, 161);
+}
+
+.sub .des .form input.Err-Text::placeholder {
+  color: rgba(255, 0, 0, 0.741);
+}
+
+.sub .des .form input#Email:focus {
+  outline: none;
+  border-color: black;
+}
+
+.sub .des .form input#Btn {
+  width: 100%;
+  padding: 13px;
+  border-radius: 6px;
+  border: none;
+  margin-top: 20px;
+  color: white;
+  background-image: linear-gradient(0deg, #232744,#232744);
+  box-shadow: 0 5px 10px #23274431;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.sub .des .form input#Btn:hover {
+  background-image: linear-gradient(90deg, #ff5379, #ff693e);
+  box-shadow: 0 5px 15px #ff53784a, 0 8px 15px #ff683e5a;
+}
+
+/* mobile */
+
+@media screen and (max-device-width: 425px) {
+  .sub {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    flex-direction: column-reverse;
+    justify-content: unset;
+    border-radius: 0;
+  }
+
+  .sub .des {
+    width: 95%;
+    padding: 10px 8px 20px 8px;
+    margin-top: 30px;
+  }
+
+  .sub .image {
+    width: 100%;
+    height: 40%;
+    background-image: url(./assets/images/illustration-sign-up-mobile.svg);
+    border-radius: unset;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .sub img.hero {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* after large mobile & before tablet :D */
+
+@media screen and (min-device-width: 426px) and (max-device-width: 767px) {
+  .sub {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    flex-direction: column-reverse;
+    justify-content: unset;
+    border-radius: 0;
+  }
+
+  .sub .des {
+    width: 95%;
+    padding: 10px 8px 20px 8px;
+    margin-top: 30px;
+  }
+
+  .sub .image {
+    width: 100%;
+    height: 40%;
+    background-image: url(./assets/images/illustration-sign-up-mobile.svg);
+    border-radius: unset;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .sub img.hero {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* tablet */
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .sub {
+    width: 80%;
+    height: 70%;
+    padding: 20px;
+  }
+
+  .sub .des {
+    width: 50%;
+    padding-left: 25px;
+  }
+}
+
+/* end subscription card */
+
+/* start success card */
+
+.success {
+  position: relative;
+  top: 600px;
+  width: 30%;
+  padding: 30px 50px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 15px #00000036;
+  flex-direction: column;
+  display: none;
+}
+
+.success.animation {
+  animation: success 1s ease-in-out forwards;
+}
+
+@keyframes success {
+  0% {
+    top: 600px;
+  }
+
+  100% {
+    top: 0;
+  }
+
+}
+
+.success img {
+  width: 50px;
+  margin-bottom: 20px;
+}
+
+.success h1 {
+  font-size: 50px;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.success p {
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.success p span {
+  font-weight: bold;
+}
+
+.success button {
+  width: 100%;
+  padding: 13px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border: none;
+  color: white;
+  background-image: linear-gradient(0deg, #232744, #232744);
+  box-shadow: 0 5px 10px #23274431;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.success button:hover {
+  background-image: linear-gradient(90deg, #ff5379, #ff693e);
+  box-shadow: 0 5px 15px #ff53784a, 0 8px 15px #ff683e5a;
+}
+
+/* mobile */
+
+@media screen and (max-device-width: 425px) {
+  .success {
+    width: 100%;
+    height: 100%;
+    padding: 100px 20px 10px;
+    border-radius: unset;
+    box-shadow: 0 10px 15px #00000036;
+    display: none;
+  }
+
+  .success img {
+    width: 50px;
+    margin-bottom: 40px;
+  }
+
+  .success h1 {
+    font-size: 40px;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  .success p {
+    margin-bottom: auto;
+    line-height: 1.5;
+    font-size: 14px;
+  }
+
+  .success button {
+    align-self: flex-end;
+  }
+}
+
+/* after large mobile & before tablet :D */
+
+@media screen and (min-device-width: 426px) and (max-device-width: 767px) {
+  .success {
+    width: 100%;
+    height: 100%;
+    padding: 100px 20px 10px;
+    border-radius: unset;
+    box-shadow: 0 10px 15px #00000036;
+    display: none;
+  }
+
+  .success img {
+    width: 50px;
+    margin-bottom: 40px;
+  }
+
+  .success h1 {
+    font-size: 40px;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  .success p {
+    margin-bottom: auto;
+    line-height: 1.5;
+    font-size: 14px;
+  }
+
+  .success button {
+    align-self: flex-end;
+  }
+}
+
+/* tablet */
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .success {
+    width: 60%;
+    display: none;
+  }
+}
+
+/* end success card */

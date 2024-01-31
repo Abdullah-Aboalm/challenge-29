@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+<body>
+  <!-- Sign-up form start -->
+  <div class="sub" id="sub">
+    <div class="des">
+      <h1>Stay updated!</h1>
+      <p class="head">Join 60,000+ product managers receiving monthly updates on:</p>
+      <ul>
+        <li><img src="./assets/images/icon-list.svg" alt="">Product discovery and building what matters</li>
+        <li><img src="./assets/images/icon-list.svg" alt="">Measuring to ensure updates are a success</li>
+        <li><img src="./assets/images/icon-list.svg" alt="">And much more!</li>
+      </ul>
+      <div class="form">
+        <div class="label">
+          <label for="Email">Email address</label>
+          <p id="Err">Valid email required</p>
+        </div>
+        <input class="" type="email" name="Email" id="Email" placeholder="email@company.com">
+        <input id="Btn" type="submit" value="Subscribe to monthly newsletter">
+      </div>
+    </div>
+    <div class="image"></div>
+  </div>
+  <!-- Sign-up form end -->
+  <!-- Success message start -->
+  <div class="success" id="success">
+    <img src="./assets/images/icon-success.svg" alt="">
+    <h1>Thanks for subscribing!</h1>
+    <p>A confirmation email has been sent to <span id="E-address">ash@loremcompany.com</span>.
+    Please open it and click the button inside to confirm your subscription.</p>
+    <button id="Dismiss">Dismiss message</button>
+  </div>
+  <!-- Success message end -->
+  <script src="main.js"></script>
+</body>
+</html>
